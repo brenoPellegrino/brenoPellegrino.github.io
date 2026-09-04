@@ -1,41 +1,213 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>portifolioBreno</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Breno Dutra Pellegrino</title>
+  <style>
+    :root {
+      --bg: #f7f7f5;
+      --surface: #ffffff;
+      --text: #1a1a1a;
+      --muted: #5c5c5c;
+      --border: #e6e6e2;
+      --accent: #0f766e;
+      --accent-soft: #ccfbf1;
+      --chip: #f0f0ec;
+      --shadow: 0 1px 2px rgba(0,0,0,.04), 0 8px 24px rgba(0,0,0,.05);
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #14140f;
+        --surface: #1c1c17;
+        --text: #f2f2ec;
+        --muted: #a8a89f;
+        --border: #2c2c25;
+        --accent: #2dd4bf;
+        --accent-soft: #0b3b36;
+        --chip: #26261f;
+        --shadow: 0 1px 2px rgba(0,0,0,.3), 0 8px 24px rgba(0,0,0,.35);
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .wrap { max-width: 860px; margin: 0 auto; padding: 0 24px; }
+
+    /* Hero */
+    .hero {
+      display: flex;
+      gap: 32px;
+      align-items: center;
+      flex-wrap: wrap;
+      padding: 72px 0 48px;
+    }
+    .hero img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid var(--surface);
+      box-shadow: var(--shadow);
+      flex-shrink: 0;
+    }
+    .hero-text { flex: 1; min-width: 260px; }
+    .eyebrow {
+      display: inline-block;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+      color: var(--accent);
+      background: var(--accent-soft);
+      padding: 4px 12px;
+      border-radius: 999px;
+      margin-bottom: 14px;
+    }
+    .hero h1 { font-size: 2.4rem; margin: 0 0 8px; line-height: 1.15; letter-spacing: -.02em; }
+    .hero .location { color: var(--muted); font-size: 15px; margin: 0 0 16px; }
+    .hero p.bio { color: var(--muted); font-size: 17px; margin: 0 0 22px; max-width: 52ch; }
+    .actions { display: flex; gap: 12px; flex-wrap: wrap; }
+    .btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 10px 18px; border-radius: 10px;
+      font-size: 15px; font-weight: 600;
+      border: 1px solid var(--border);
+      background: var(--surface); color: var(--text);
+      box-shadow: var(--shadow);
+    }
+    .btn:hover { text-decoration: none; border-color: var(--accent); }
+    .btn.primary { background: var(--accent); color: #fff; border-color: var(--accent); }
+
+    section { padding: 40px 0; border-top: 1px solid var(--border); }
+    h2 { font-size: 1.4rem; margin: 0 0 24px; letter-spacing: -.01em; }
+
+    /* Projects */
+    .cards { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+    @media (max-width: 640px) { .cards { grid-template-columns: 1fr; } }
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 22px;
+      box-shadow: var(--shadow);
+      display: flex; flex-direction: column;
+    }
+    .card h3 { margin: 0 0 4px; font-size: 1.15rem; display: flex; align-items: center; gap: 8px; }
+    .card .tag { color: var(--muted); font-size: 13px; margin: 0 0 12px; }
+    .card p { color: var(--muted); font-size: 14.5px; margin: 0 0 16px; flex: 1; }
+    .card .stack { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 16px; }
+    .card .stack span { font-size: 12px; background: var(--chip); color: var(--muted); padding: 3px 9px; border-radius: 6px; }
+    .card .link { font-weight: 600; font-size: 14px; }
+
+    /* Skills */
+    .skill-group { margin-bottom: 22px; }
+    .skill-group h4 { margin: 0 0 12px; font-size: 14px; text-transform: uppercase; letter-spacing: .04em; color: var(--muted); font-weight: 600; }
+    .chips { display: flex; flex-wrap: wrap; gap: 8px; }
+    .chips span {
+      font-size: 14px; padding: 6px 14px; border-radius: 999px;
+      background: var(--surface); border: 1px solid var(--border); color: var(--text);
+    }
+
+    /* Interests */
+    .interests { display: flex; flex-wrap: wrap; gap: 10px; }
+    .interests a {
+      font-size: 14px; padding: 6px 14px; border-radius: 999px;
+      background: var(--chip); color: var(--text); border: 1px solid var(--border);
+    }
+    .interests a:hover { text-decoration: none; border-color: var(--accent); }
+
+    footer { border-top: 1px solid var(--border); padding: 36px 0 56px; color: var(--muted); font-size: 14px; }
+    footer .links { display: flex; gap: 18px; flex-wrap: wrap; margin-bottom: 12px; }
+    footer a { font-weight: 600; }
+  </style>
 </head>
 <body>
-    <h1>Breno Dutra Pellegrino</h1>
-    <img id="fotoPerfil" src="images/fotoPerfilBreno" alt="Foto de Breno feliz em seu casamento" width="300px">
-    <p>
-        <a href="#fotoPerfil">Breno Dutra Pellegrino</a>
-        , brasileiro, 34 anos, casado. <br>
-        Belo Horizonte - MG <br>
-    </p>
-    
-    <h3>Minhas habilidade</h3>
-    <p>
-        <ul>
-        <li><em>Empatia</em></li>
-        <li><em>Paciềncia</em></li>
-        <li><em>Colaboração</em></li>
-        <li><em>Confiança</em></li>
-        <li><strong>Perseverança</strong></li>
+  <main class="wrap">
 
-        </ul>
+    <header class="hero">
+      <img src="images/fotoPerfilBreno" alt="Foto de Breno Dutra Pellegrino">
+      <div class="hero-text">
+        <span class="eyebrow">Desenvolvedor Full-Stack</span>
+        <h1>Breno Dutra Pellegrino</h1>
+        <p class="location">Belo Horizonte · Minas Gerais, Brasil</p>
+        <p class="bio">Construo produtos web de ponta a ponta com TypeScript e React/Next.js, da ideia ao deploy. Gosto de unir uma interface bem-acabada a um pouco de dado e modelo por trás.</p>
+        <div class="actions">
+          <a class="btn primary" href="#projetos">Ver projetos</a>
+          <a class="btn" href="https://github.com/brenoPellegrino" target="_blank" rel="noopener">GitHub</a>
+          <a class="btn" href="mailto:bdpellegrino@gmail.com">E-mail</a>
+        </div>
+      </div>
+    </header>
 
-    </p>
-    
-    <h3>Blogs de interesse </h3>
-    <p>
-                <ol>
-            <li><a href="https://www.clubefii.com.br/blog">Clube Fii</a></li>
-            <li><a href="https://br.investing.com/blog/">Investing.com</a> </li>
-            <li><a href="https://www.nintendoblast.com.br/">Nintendo Blast</a></li>
-        </ol>
-    </p>
-       
+    <section id="projetos">
+      <h2>Projetos</h2>
+      <div class="cards">
+
+        <article class="card">
+          <h3>⚽ Porcento</h3>
+          <p class="tag">Futebol em probabilidades</p>
+          <p>Predições do Brasileirão de forma simples: chance de vitória, empate ou derrota, placar provável e classificação projetada rodada a rodada. Interface limpa apoiada por um modelo estatístico próprio.</p>
+          <div class="stack"><span>Next.js</span><span>TypeScript</span><span>Supabase</span><span>Vercel</span></div>
+          <a class="link" href="https://porcento-app.vercel.app/" target="_blank" rel="noopener">Ver projeto no ar →</a>
+        </article>
+
+        <article class="card">
+          <h3>📸 Plating</h3>
+          <p class="tag">Estúdio de fotos com IA</p>
+          <p>Transforma a foto de um prato tirada no celular em um álbum de fotos profissionais, com versões prontas para cada canal. Feito para pequenos restaurantes e docerias.</p>
+          <div class="stack"><span>Next.js</span><span>TypeScript</span><span>IA generativa</span></div>
+          <a class="link" href="https://plating-five.vercel.app/" target="_blank" rel="noopener">Ver projeto no ar →</a>
+        </article>
+
+      </div>
+    </section>
+
+    <section>
+      <h2>Habilidades</h2>
+      <div class="skill-group">
+        <h4>Tecnologias</h4>
+        <div class="chips">
+          <span>TypeScript</span><span>JavaScript</span><span>React</span><span>Next.js</span><span>Node.js</span><span>Supabase</span><span>HTML</span><span>CSS</span><span>Git</span><span>Vercel</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <h4>Comportamentais</h4>
+        <div class="chips">
+          <span>Empatia</span><span>Paciência</span><span>Colaboração</span><span>Confiança</span><span>Perseverança</span>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Interesses</h2>
+      <p style="color:var(--muted); margin:0 0 16px; font-size:15px;">Blogs que acompanho fora do código.</p>
+      <div class="interests">
+        <a href="https://www.clubefii.com.br/blog" target="_blank" rel="noopener">Clube Fii</a>
+        <a href="https://br.investing.com/blog/" target="_blank" rel="noopener">Investing.com</a>
+        <a href="https://www.nintendoblast.com.br/" target="_blank" rel="noopener">Nintendo Blast</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div class="links">
+        <a href="https://github.com/brenoPellegrino" target="_blank" rel="noopener">GitHub</a>
+        <a href="mailto:bdpellegrino@gmail.com">bdpellegrino@gmail.com</a>
+      </div>
+      <div>© 2026 Breno Dutra Pellegrino</div>
+    </div>
+  </footer>
+
 </body>
 </html>
