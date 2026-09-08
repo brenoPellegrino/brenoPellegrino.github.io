@@ -4,10 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Breno Pellegrino — Software Engineer (C#/.NET · React/TypeScript)</title>
-  <meta name="description" content="Breno Pellegrino is a software engineer based in Florida who builds and ships full-stack products — C#/.NET and Node.js services, React/TypeScript front ends, and AI applications.">
+  <title>Breno Pellegrino · Software Engineer (C#/.NET, React/TypeScript)</title>
+  <meta name="description" content="Breno Pellegrino is a software engineer based in Florida who builds and ships full-stack products: C#/.NET and Node.js services, React/TypeScript front ends and AI applications.">
   <meta name="author" content="Breno Pellegrino">
-  <meta name="theme-color" content="#0f766e">
+  <meta name="theme-color" content="#111111">
   <link rel="canonical" href="https://brenopellegrino.github.io/">
 
   <!-- Icons -->
@@ -17,15 +17,15 @@
 
   <!-- Open Graph / Twitter -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Breno Pellegrino — Software Engineer">
-  <meta property="og:description" content="Software engineer in Florida building and shipping full-stack products: C#/.NET, React/TypeScript, Node.js, and AI applications.">
+  <meta property="og:title" content="Breno Pellegrino, Software Engineer">
+  <meta property="og:description" content="Software engineer in Florida building and shipping full-stack products: C#/.NET, React/TypeScript, Node.js and AI applications.">
   <meta property="og:url" content="https://brenopellegrino.github.io/">
   <meta property="og:image" content="https://brenopellegrino.github.io/images/og-image.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Breno Pellegrino — Software Engineer">
-  <meta name="twitter:description" content="Software engineer in Florida building and shipping full-stack products: C#/.NET, React/TypeScript, Node.js, and AI applications.">
+  <meta name="twitter:title" content="Breno Pellegrino, Software Engineer">
+  <meta name="twitter:description" content="Software engineer in Florida building and shipping full-stack products: C#/.NET, React/TypeScript, Node.js and AI applications.">
   <meta name="twitter:image" content="https://brenopellegrino.github.io/images/og-image.jpg">
 
   <script type="application/ld+json">
@@ -44,39 +44,37 @@
 
   <style>
     :root {
-      --bg: #f7f7f5;
+      --bg: #f4f4f3;
       --surface: #ffffff;
-      --surface-2: #fbfbf9;
-      --text: #17170f;
-      --muted: #5c5c56;
-      --faint: #8a8a82;
-      --border: #e7e7e2;
-      --border-strong: #d9d9d2;
-      --accent: #0f766e;
-      --accent-ink: #0b5a54;
-      --accent-soft: #d7f2ed;
-      --chip: #f0f0ec;
-      --shadow-sm: 0 1px 2px rgba(20,20,15,.05);
-      --shadow: 0 1px 2px rgba(20,20,15,.04), 0 10px 30px rgba(20,20,15,.06);
-      --shadow-lg: 0 2px 4px rgba(20,20,15,.05), 0 20px 50px rgba(20,20,15,.10);
+      --surface-2: #fafafa;
+      --text: #141414;
+      --muted: #666660;
+      --faint: #9a9a94;
+      --border: #e4e4e0;
+      --border-strong: #d4d4cf;
+      --accent: #141414;
+      --accent-hover: #000000;
+      --accent-contrast: #ffffff;
+      --shadow-sm: 0 1px 2px rgba(0,0,0,.05);
+      --shadow: 0 1px 2px rgba(0,0,0,.04), 0 10px 30px rgba(0,0,0,.06);
+      --shadow-lg: 0 2px 4px rgba(0,0,0,.05), 0 20px 50px rgba(0,0,0,.10);
       --mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
       --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      --radius: 16px;
+      --radius: 14px;
     }
     @media (prefers-color-scheme: dark) {
       :root {
-        --bg: #121210;
-        --surface: #1b1b18;
-        --surface-2: #171714;
-        --text: #f3f3ec;
-        --muted: #a9a9a0;
-        --faint: #86867d;
-        --border: #2b2b25;
-        --border-strong: #35352d;
-        --accent: #2dd4bf;
-        --accent-ink: #5eead4;
-        --accent-soft: #0c3b36;
-        --chip: #24241d;
+        --bg: #0c0c0c;
+        --surface: #161616;
+        --surface-2: #121212;
+        --text: #f3f3f1;
+        --muted: #9c9c96;
+        --faint: #6d6d67;
+        --border: #262624;
+        --border-strong: #34342f;
+        --accent: #f3f3f1;
+        --accent-hover: #ffffff;
+        --accent-contrast: #0c0c0c;
         --shadow-sm: 0 1px 2px rgba(0,0,0,.3);
         --shadow: 0 1px 2px rgba(0,0,0,.3), 0 12px 30px rgba(0,0,0,.4);
         --shadow-lg: 0 2px 4px rgba(0,0,0,.35), 0 24px 55px rgba(0,0,0,.5);
@@ -96,27 +94,26 @@
       -webkit-font-smoothing: antialiased;
       text-rendering: optimizeLegibility;
     }
-    a { color: var(--accent-ink); text-decoration: none; }
+    a { color: var(--text); text-decoration: none; }
     a:hover { text-decoration: underline; }
     img { max-width: 100%; display: block; }
     :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
 
     .wrap { max-width: 940px; margin: 0 auto; padding: 0 24px; }
-    .mono { font-family: var(--mono); }
     .eyebrow {
       font-family: var(--mono);
-      font-size: 12.5px;
+      font-size: 12px;
       font-weight: 600;
-      letter-spacing: .16em;
+      letter-spacing: .18em;
       text-transform: uppercase;
-      color: var(--accent-ink);
+      color: var(--muted);
     }
 
     /* ---------- Nav ---------- */
     .nav {
       position: sticky; top: 0; z-index: 50;
       background: var(--bg);
-      background: color-mix(in srgb, var(--bg) 86%, transparent);
+      background: color-mix(in srgb, var(--bg) 88%, transparent);
       -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px);
       border-bottom: 1px solid var(--border);
     }
@@ -124,28 +121,22 @@
     .brand { display: inline-flex; align-items: center; gap: 10px; font-weight: 700; color: var(--text); letter-spacing: -.01em; }
     .brand:hover { text-decoration: none; }
     .brand .mark {
-      width: 30px; height: 30px; border-radius: 8px; background: var(--accent);
-      color: #fff; display: grid; place-items: center; font-weight: 700; font-size: 16px; flex-shrink: 0;
+      width: 30px; height: 30px; border-radius: 7px; background: var(--accent);
+      color: var(--accent-contrast); display: grid; place-items: center; font-weight: 700; font-size: 16px; flex-shrink: 0;
     }
     .nav-links { display: flex; align-items: center; gap: 26px; }
     .nav-links a { color: var(--muted); font-size: 15px; font-weight: 500; }
     .nav-links a:hover { color: var(--text); text-decoration: none; }
-    .nav-social { display: inline-flex; align-items: center; gap: 4px; }
-    .icon-btn {
-      display: inline-grid; place-items: center; width: 38px; height: 38px; border-radius: 9px;
-      color: var(--muted);
-    }
-    .icon-btn:hover { color: var(--text); background: var(--chip); text-decoration: none; }
+    .icon-btn { display: inline-grid; place-items: center; width: 38px; height: 38px; border-radius: 9px; color: var(--muted); }
+    .icon-btn:hover { color: var(--text); background: var(--surface-2); text-decoration: none; }
     .icon-btn svg { width: 19px; height: 19px; }
-    @media (max-width: 720px) {
-      .nav-links .desk { display: none; }
-    }
+    @media (max-width: 720px) { .nav-links .desk { display: none; } }
 
     /* ---------- Buttons ---------- */
     .actions { display: flex; gap: 12px; flex-wrap: wrap; }
     .btn {
       display: inline-flex; align-items: center; gap: 8px;
-      padding: 11px 18px; border-radius: 11px;
+      padding: 11px 18px; border-radius: 10px;
       font-size: 15px; font-weight: 600;
       border: 1px solid var(--border-strong);
       background: var(--surface); color: var(--text);
@@ -153,19 +144,18 @@
       transition: border-color .15s ease, transform .05s ease;
       min-height: 44px;
     }
-    .btn:hover { text-decoration: none; border-color: var(--accent); }
+    .btn:hover { text-decoration: none; border-color: var(--text); }
     .btn:active { transform: translateY(1px); }
     .btn svg { width: 17px; height: 17px; }
-    .btn.primary { background: var(--accent); color: #fff; border-color: var(--accent); }
-    .btn.primary:hover { background: var(--accent-ink); border-color: var(--accent-ink); }
+    .btn.primary { background: var(--accent); color: var(--accent-contrast); border-color: var(--accent); }
+    .btn.primary:hover { background: var(--accent-hover); border-color: var(--accent-hover); }
 
     /* ---------- Hero ---------- */
     .hero { display: grid; grid-template-columns: 1fr auto; gap: 40px; align-items: center; padding: 70px 0 30px; }
     .hero h1 { font-size: clamp(2.1rem, 6vw, 3rem); margin: 12px 0 10px; line-height: 1.08; letter-spacing: -.025em; }
     .hero .role { font-size: clamp(1.05rem, 3vw, 1.28rem); font-weight: 600; margin: 0 0 14px; color: var(--text); }
     .hero .role .sep { color: var(--faint); font-weight: 400; margin: 0 4px; }
-    .hero .location { color: var(--muted); font-size: 15px; margin: 0 0 20px; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
-    .hero .location .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); display: inline-block; }
+    .hero .location { color: var(--muted); font-size: 15px; margin: 0 0 20px; }
     .hero p.bio { color: var(--muted); font-size: 17.5px; margin: 0 0 26px; max-width: 56ch; }
     .hero .bio strong { color: var(--text); font-weight: 600; }
     .avatar {
@@ -210,31 +200,26 @@
 
     .project-body { padding: 24px 26px 26px; }
     .project-body h3 { font-size: 1.3rem; margin: 0 0 4px; letter-spacing: -.01em; display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; }
-    .project-body .tagline { color: var(--accent-ink); font-weight: 600; font-size: 14.5px; margin: 0 0 14px; }
+    .project-body .live { font-family: var(--mono); font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: var(--faint); font-weight: 600; }
+    .project-body .tagline { color: var(--text); font-weight: 600; font-size: 15px; margin: 0 0 14px; }
     .project-body p { color: var(--muted); font-size: 15.5px; margin: 0 0 14px; }
     .project-body p:last-of-type { margin-bottom: 18px; }
-    .stack { display: flex; flex-wrap: wrap; gap: 7px; margin-bottom: 20px; }
-    .stack span {
-      font-family: var(--mono); font-size: 12px; letter-spacing: .01em;
-      background: var(--chip); color: var(--muted); padding: 4px 10px; border-radius: 7px;
-      border: 1px solid transparent;
-    }
-    .stack span.hi { background: var(--accent-soft); color: var(--accent-ink); }
+    .tech { font-family: var(--mono); font-size: 12.5px; letter-spacing: .01em; color: var(--muted); margin: 0 0 20px; }
+    .tech b { color: var(--text); font-weight: 600; }
 
     /* ---------- About ---------- */
     .about-grid { display: grid; grid-template-columns: 1fr; gap: 18px; max-width: 68ch; }
     .about-grid p { margin: 0; color: var(--muted); }
     .about-grid p strong { color: var(--text); font-weight: 600; }
-    .about-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
-    .about-tags span { font-size: 13.5px; color: var(--muted); background: var(--surface); border: 1px solid var(--border); border-radius: 999px; padding: 5px 13px; }
+    .about-line { font-family: var(--mono); font-size: 12.5px; letter-spacing: .01em; color: var(--faint); margin-top: 4px; }
 
     /* ---------- Skills ---------- */
     .skills { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
     @media (max-width: 640px) { .skills { grid-template-columns: 1fr; } }
-    .skill-group { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 20px; box-shadow: var(--shadow-sm); }
-    .skill-group h4 { margin: 0 0 14px; font-family: var(--mono); font-size: 12px; letter-spacing: .1em; text-transform: uppercase; color: var(--faint); font-weight: 600; }
-    .skill-group .chips { display: flex; flex-wrap: wrap; gap: 8px; }
-    .skill-group .chips span { font-size: 14px; padding: 6px 13px; border-radius: 8px; background: var(--bg); border: 1px solid var(--border); color: var(--text); }
+    .skill-group { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 20px 22px; box-shadow: var(--shadow-sm); }
+    .skill-group h4 { margin: 0 0 10px; font-family: var(--mono); font-size: 11.5px; letter-spacing: .12em; text-transform: uppercase; color: var(--faint); font-weight: 600; }
+    .skill-group .items { font-size: 15.5px; color: var(--text); line-height: 1.7; }
+    .skill-group .items .sep { color: var(--border-strong); margin: 0 7px; }
     .skills-note { color: var(--faint); font-size: 13.5px; margin: 16px 0 0; }
 
     /* ---------- Contact ---------- */
@@ -253,8 +238,7 @@
     footer a { color: var(--muted); font-weight: 500; }
     footer a:hover { color: var(--text); }
 
-    .visually-hidden { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap; border:0; }
-    .skip { position:absolute; left:12px; top:-60px; z-index:100; background:var(--accent); color:#fff; padding:10px 16px; border-radius:9px; font-weight:600; transition:top .15s ease; }
+    .skip { position:absolute; left:12px; top:-60px; z-index:100; background:var(--accent); color:var(--accent-contrast); padding:10px 16px; border-radius:9px; font-weight:600; transition:top .15s ease; }
     .skip:focus { top:12px; text-decoration:none; }
   </style>
 </head>
@@ -264,7 +248,7 @@
   <!-- ===== Nav ===== -->
   <header class="nav">
     <div class="wrap nav-inner">
-      <a class="brand" href="#top" aria-label="Breno Pellegrino — home">
+      <a class="brand" href="#top" aria-label="Breno Pellegrino, home">
         <span class="mark" aria-hidden="true">B</span>
         <span>Breno Pellegrino</span>
       </a>
@@ -273,11 +257,9 @@
         <a class="desk" href="#about">About</a>
         <a class="desk" href="#skills">Skills</a>
         <a class="desk" href="#contact">Contact</a>
-        <span class="nav-social">
-          <a class="icon-btn" href="https://github.com/brenoPellegrino" target="_blank" rel="noopener" aria-label="GitHub">
-            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5A11.5 11.5 0 0 0 .5 12a11.5 11.5 0 0 0 7.86 10.92c.58.11.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.53-1.34-1.3-1.7-1.3-1.7-1.06-.72.08-.71.08-.71 1.17.08 1.79 1.2 1.79 1.2 1.04 1.78 2.73 1.27 3.4.97.1-.76.41-1.27.74-1.56-2.55-.29-5.23-1.28-5.23-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.43-2.69 5.41-5.25 5.69.42.36.8 1.08.8 2.18v3.24c0 .31.21.68.8.56A11.5 11.5 0 0 0 23.5 12 11.5 11.5 0 0 0 12 .5Z"/></svg>
-          </a>
-        </span>
+        <a class="icon-btn" href="https://github.com/brenoPellegrino" target="_blank" rel="noopener" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5A11.5 11.5 0 0 0 .5 12a11.5 11.5 0 0 0 7.86 10.92c.58.11.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.53-1.34-1.3-1.7-1.3-1.7-1.06-.72.08-.71.08-.71 1.17.08 1.79 1.2 1.79 1.2 1.04 1.78 2.73 1.27 3.4.97.1-.76.41-1.27.74-1.56-2.55-.29-5.23-1.28-5.23-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.43-2.69 5.41-5.25 5.69.42.36.8 1.08.8 2.18v3.24c0 .31.21.68.8.56A11.5 11.5 0 0 0 23.5 12 11.5 11.5 0 0 0 12 .5Z"/></svg>
+        </a>
       </nav>
     </div>
   </header>
@@ -290,8 +272,8 @@
         <span class="eyebrow">Software Engineer</span>
         <h1 id="hero-name">Breno Pellegrino</h1>
         <p class="role">C#/.NET<span class="sep">·</span>React / TypeScript<span class="sep">·</span>Node.js</p>
-        <p class="location"><span class="dot" aria-hidden="true"></span>Davenport, Florida · United States &nbsp;·&nbsp; Open to Software Engineer roles</p>
-        <p class="bio">I build and ship full-stack products end to end &mdash; production <strong>APIs and services in C#/.NET and Node.js</strong>, backed by relational data and messaging, with <strong>React, TypeScript, and Next.js</strong> front ends on top. Strong on the backend, comfortable across the whole stack, and increasingly focused on shipping AI/LLM features to production.</p>
+        <p class="location">Davenport, Florida, United States &nbsp;·&nbsp; Open to Software Engineer roles</p>
+        <p class="bio">I build and ship full-stack products end to end. On the backend I write production <strong>APIs and services in C#/.NET and Node.js</strong>, backed by relational data and messaging, with <strong>React, TypeScript and Next.js</strong> front ends on top. Strong on the backend, comfortable across the whole stack and increasingly focused on shipping AI/LLM features to production.</p>
         <div class="actions">
           <a class="btn primary" href="#projects">View projects</a>
           <a class="btn" href="https://github.com/brenoPellegrino" target="_blank" rel="noopener">
@@ -330,18 +312,11 @@
             </a>
           </div>
           <div class="project-body">
-            <h3>Porcento <span class="eyebrow" style="letter-spacing:.1em;">Live</span></h3>
+            <h3>Porcento <span class="live">Live</span></h3>
             <p class="tagline">Football predictions from a statistical model</p>
-            <p>Porcento turns a season of football data into clear probabilities. For each upcoming match it estimates win / draw / loss chances, a likely scoreline, and projected final standings &mdash; updated round by round, for regular fans rather than analysts.</p>
-            <p>I built the full product: the <strong>statistical model</strong> behind the predictions, the data that feeds it, and a clean Next.js interface that makes the numbers easy to read. The interesting part is keeping projections consistent across a whole season as real results come in.</p>
-            <div class="stack">
-              <span class="hi">Full Stack</span>
-              <span class="hi">Statistical Modeling</span>
-              <span>Next.js</span>
-              <span>TypeScript</span>
-              <span>Supabase</span>
-              <span>Vercel</span>
-            </div>
+            <p>Porcento turns a season of football data into clear probabilities. For each upcoming match it estimates win / draw / loss chances, a likely scoreline and projected final standings, updated round by round for regular fans rather than analysts.</p>
+            <p>I built the full product: the <strong>statistical model</strong> behind the predictions, the data that feeds it and a clean Next.js interface that makes the numbers easy to read. The interesting part is keeping projections consistent across a whole season as real results come in.</p>
+            <p class="tech"><b>Full Stack</b> · <b>Statistical Modeling</b> · Next.js · TypeScript · Supabase · Vercel</p>
             <div class="actions">
               <a class="btn primary" href="https://porcento-app.vercel.app/" target="_blank" rel="noopener">
                 Live demo
@@ -363,18 +338,11 @@
             </a>
           </div>
           <div class="project-body">
-            <h3>Plating <span class="eyebrow" style="letter-spacing:.1em;">Live</span></h3>
-            <p class="tagline">Professional food photography from one phone photo &mdash; powered by AI</p>
-            <p>Plating helps small restaurants and bakeries get professional-looking food photography without a photo shoot. You upload a single phone photo of a dish and it generates an album of polished shots, with versions ready for different channels like menus, delivery apps, and social.</p>
-            <p>I built it end to end: the <strong>generative-AI pipeline</strong>, the backend and API integration that runs it, user accounts with an album and credits system, and the Next.js interface &mdash; then deployed it. The real challenge is turning an amateur photo into consistent, on-brand results a business can actually publish.</p>
-            <div class="stack">
-              <span class="hi">AI</span>
-              <span class="hi">Full Stack</span>
-              <span>Next.js</span>
-              <span>TypeScript</span>
-              <span>Generative AI</span>
-              <span>Vercel</span>
-            </div>
+            <h3>Plating <span class="live">Live</span></h3>
+            <p class="tagline">Professional food photography from one phone photo, powered by AI</p>
+            <p>Plating helps small restaurants and bakeries get professional-looking food photography without a photo shoot. You upload a single phone photo of a dish and it generates an album of polished shots, with versions ready for different channels like menus, delivery apps and social.</p>
+            <p>I built the whole thing: the <strong>generative-AI pipeline</strong>, the backend and API integration that runs it, user accounts with an album and credits system and the Next.js interface. Then I deployed it. The real challenge is turning an amateur photo into consistent, on-brand results a business can actually publish.</p>
+            <p class="tech"><b>AI</b> · <b>Full Stack</b> · Next.js · TypeScript · Generative AI · Vercel</p>
             <div class="actions">
               <a class="btn primary" href="https://plating-five.vercel.app/" target="_blank" rel="noopener">
                 Live demo
@@ -396,16 +364,10 @@
         <h2 id="about-title">From running a business to shipping software</h2>
       </div>
       <div class="about-grid">
-        <p>I&rsquo;m a software engineer based in Florida. I came to engineering from a slightly unusual path &mdash; a background in engineering, and several years <strong>owning and running a hospitality business</strong> before moving into software full time.</p>
-        <p>That path shapes how I work. Running a business meant owning outcomes end to end: operations, finances, and customers, with problems that had to be solved under pressure and with real money on the line. I bring that same <strong>ownership</strong> to engineering &mdash; I think about the user and the business behind a feature, communicate clearly with the people around me, and follow work all the way from idea to production.</p>
-        <p>Today I focus on <strong>backend and full-stack development</strong>: C#/.NET services and APIs, React/TypeScript front ends, relational databases, event-driven messaging, and building LLM and agent features that hold up in production.</p>
-        <div class="about-tags" aria-label="How I work">
-          <span>Product ownership</span>
-          <span>Clear communication</span>
-          <span>Problem solving</span>
-          <span>Business understanding</span>
-          <span>Calm under pressure</span>
-        </div>
+        <p>I&rsquo;m a software engineer based in Florida. I came to engineering from a slightly unusual path: a background in engineering and several years <strong>owning and running a hospitality business</strong> before moving into software full time.</p>
+        <p>That path shapes how I work. Running a business meant owning outcomes end to end: operations, finances and customers, with problems that had to be solved under pressure and with real money on the line. I bring that same <strong>ownership</strong> to engineering. I think about the user and the business behind a feature, communicate clearly with the people around me and follow work all the way from idea to production.</p>
+        <p>Today I focus on <strong>backend and full-stack development</strong>: C#/.NET services and APIs, React/TypeScript front ends, relational databases, event-driven messaging and building LLM and agent features that hold up in production.</p>
+        <p class="about-line">Product ownership · Clear communication · Problem solving · Business understanding · Calm under pressure</p>
       </div>
     </section>
 
@@ -420,42 +382,22 @@
       <div class="skills">
         <div class="skill-group">
           <h4>Backend &amp; Data</h4>
-          <div class="chips">
-            <span>C# / .NET</span>
-            <span>Node.js</span>
-            <span>REST APIs</span>
-            <span>PostgreSQL</span>
-            <span>SQL Server</span>
-          </div>
+          <div class="items">C# / .NET<span class="sep">·</span>Node.js<span class="sep">·</span>REST APIs<span class="sep">·</span>PostgreSQL<span class="sep">·</span>SQL Server</div>
         </div>
         <div class="skill-group">
           <h4>Messaging &amp; Events</h4>
-          <div class="chips">
-            <span>Event-driven systems</span>
-            <span>Azure Service Bus</span>
-            <span>Google Pub/Sub</span>
-          </div>
+          <div class="items">Event-driven systems<span class="sep">·</span>Azure Service Bus<span class="sep">·</span>Google Pub/Sub</div>
         </div>
         <div class="skill-group">
           <h4>Frontend</h4>
-          <div class="chips">
-            <span>React</span>
-            <span>TypeScript</span>
-            <span>Next.js</span>
-          </div>
+          <div class="items">React<span class="sep">·</span>TypeScript<span class="sep">·</span>Next.js</div>
         </div>
         <div class="skill-group">
           <h4>Platform &amp; AI</h4>
-          <div class="chips">
-            <span>Docker</span>
-            <span>CI/CD</span>
-            <span>Automated testing</span>
-            <span>Git</span>
-            <span>LLM &amp; agent systems</span>
-          </div>
+          <div class="items">Docker<span class="sep">·</span>CI/CD<span class="sep">·</span>Automated testing<span class="sep">·</span>Git<span class="sep">·</span>LLM &amp; agent systems</div>
         </div>
       </div>
-      <p class="skills-note">A focused view of the tools I reach for most &mdash; the full professional history lives on my resume and LinkedIn.</p>
+      <p class="skills-note">A focused view of the tools I reach for most. My full history lives on my resume.</p>
     </section>
 
     <hr class="rule">
@@ -465,7 +407,7 @@
       <div class="contact-card">
         <span class="eyebrow">Contact</span>
         <h2 id="contact-title">Let&rsquo;s talk</h2>
-        <p>I&rsquo;m open to Software Engineer, Backend, and Full-Stack roles in the US. Email or LinkedIn is the quickest way to reach me.</p>
+        <p>I&rsquo;m open to Software Engineer, Backend and Full-Stack roles in the US. Email is the fastest way to reach me.</p>
         <div class="actions">
           <a class="btn primary" href="mailto:bdpellegrino@gmail.com">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
