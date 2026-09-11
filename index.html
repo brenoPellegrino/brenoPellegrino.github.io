@@ -207,6 +207,13 @@
     .tech { font-family: var(--mono); font-size: 12.5px; letter-spacing: .01em; color: var(--muted); margin: 0 0 20px; }
     .tech b { color: var(--text); font-weight: 600; }
 
+    /* ---------- Client work (compact text cards) ---------- */
+    .cwork { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+    @media (max-width: 640px) { .cwork { grid-template-columns: 1fr; } }
+    .cwork .project-body { padding: 22px 24px 24px; }
+    .cwork .tech { margin-bottom: 0; }
+    .section-note { color: var(--faint); font-size: 14px; margin: 8px 0 0; max-width: 60ch; }
+
     /* ---------- About ---------- */
     .about-grid { display: grid; grid-template-columns: 1fr; gap: 18px; max-width: 68ch; }
     .about-grid p { margin: 0; color: var(--muted); }
@@ -254,6 +261,7 @@
       </a>
       <nav class="nav-links" aria-label="Primary">
         <a class="desk" href="#projects">Projects</a>
+        <a class="desk" href="#experience">Experience</a>
         <a class="desk" href="#about">About</a>
         <a class="desk" href="#skills">Skills</a>
         <a class="desk" href="#contact">Contact</a>
@@ -349,6 +357,57 @@
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
               </a>
             </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <hr class="rule">
+
+    <!-- ===== Client Work ===== -->
+    <section id="experience" aria-labelledby="experience-title">
+      <div class="section-head">
+        <span class="eyebrow">Experience</span>
+        <h2 id="experience-title">Production work for clients</h2>
+        <p class="section-note">Systems I built and shipped for companies through my work at a software consultancy. These are client projects, so there are no public demos.</p>
+      </div>
+
+      <div class="cwork">
+
+        <article class="project">
+          <div class="project-body">
+            <h3>The Wallet</h3>
+            <p class="tagline">Central payment and credits platform for a trading company</p>
+            <p>I built the platform&rsquo;s core payment and credit system in C# and .NET. It processes every purchase for more than 2,000 customers a month and uses database transactions with rollback, so each operation completes fully or not at all. I also added time-bound credits to keep customer funds on the platform.</p>
+            <p class="tech"><b>C# / .NET</b> · SQL Server · Payments · Transactions</p>
+          </div>
+        </article>
+
+        <article class="project">
+          <div class="project-body">
+            <h3>AI Support Agent</h3>
+            <p class="tagline">Production LLM agent that triages support tickets</p>
+            <p>I helped build an LLM agent that reads incoming support tickets, resolves known issues automatically and routes the rest to the right person. It cut the support queue by over 80% and brought resolution time down from days to hours.</p>
+            <p class="tech"><b>LLM</b> · <b>Agents</b> · Tool calling · C# / .NET</p>
+          </div>
+        </article>
+
+        <article class="project">
+          <div class="project-body">
+            <h3>Query performance: 15s to under 1s</h3>
+            <p class="tagline">Database tuning on a high-traffic endpoint</p>
+            <p>A trade-history endpoint handling over 2,000 requests a day was loading in about 15 seconds. I read the execution plan, found missing indexes and tuned the queries, bringing it under one second.</p>
+            <p class="tech"><b>SQL Server</b> · Indexing · Performance · .NET</p>
+          </div>
+        </article>
+
+        <article class="project">
+          <div class="project-body">
+            <h3>Rental management system</h3>
+            <p class="tagline">End-to-end platform for a motorcycle rental company</p>
+            <p>I built a system that connects to a bank, manages rental contracts, sends charges to customers through WhatsApp and gives riders a portal to check their upcoming invoices.</p>
+            <p class="tech"><b>C# / .NET</b> · Integrations · PostgreSQL</p>
           </div>
         </article>
 
