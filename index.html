@@ -360,6 +360,23 @@
           </div>
         </article>
 
+        <!-- Wallet / Store-Credit -->
+        <article class="project">
+          <div class="project-body">
+            <h3>Wallet / Store-Credit System <span class="live">Open source</span></h3>
+            <p class="tagline">A payments-grade wallet in .NET 8 and SQL Server</p>
+            <p>A standalone store-credit wallet that credits, debits and transfers money without ever leaving a balance half-updated. Every money mutation runs through <strong>stored procedures over raw ADO.NET</strong> inside a SQL transaction, so each operation commits fully or rolls back. A ledger keyed by a unique event id makes requests idempotent, so repeated or concurrent calls can never double-spend.</p>
+            <p>I built it to show <strong>SQL Server depth end to end</strong>: a carefully designed schema, a covering index with a documented before/after execution-plan study, a hand-rolled ADO.NET migration runner over numbered SQL scripts and xUnit tests on the money logic, including a parallel double-spend test.</p>
+            <p class="tech"><b>C# / .NET 8</b> · <b>SQL Server</b> · Raw ADO.NET · Stored Procedures · Transactions · Docker</p>
+            <div class="actions">
+              <a class="btn primary" href="https://github.com/brenoPellegrino/wallet-store-credit" target="_blank" rel="noopener">
+                View code
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
+              </a>
+            </div>
+          </div>
+        </article>
+
       </div>
     </section>
 
