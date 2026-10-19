@@ -377,6 +377,23 @@
           </div>
         </article>
 
+        <!-- Wolverine / CQRS POC -->
+        <article class="project">
+          <div class="project-body">
+            <h3>Wolverine / CQRS POC <span class="live">Open source</span></h3>
+            <p class="tagline">Event-driven .NET with CQRS and a transactional outbox</p>
+            <p>A .NET API built with <strong>Wolverine</strong> for CQRS and messaging. Commands and queries flow through a message bus, a domain event is published and handled, and a <strong>transactional outbox</strong> over EF Core and PostgreSQL persists each message in the same transaction as the data change and dispatches it after commit, so nothing is lost on failure.</p>
+            <p>I built it to prototype and de-risk this pattern before taking it to production: clean architecture in vertical slices, FluentValidation on commands, and a full test suite with xUnit plus integration tests that run against a real PostgreSQL via Testcontainers.</p>
+            <p class="tech"><b>C# / .NET</b> · <b>Wolverine</b> · CQRS · Transactional Outbox · EF Core · PostgreSQL · Testcontainers · Docker</p>
+            <div class="actions">
+              <a class="btn primary" href="https://github.com/brenoPellegrino/dotnet-wolverine-poc" target="_blank" rel="noopener">
+                View code
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
+              </a>
+            </div>
+          </div>
+        </article>
+
       </div>
     </section>
 
@@ -461,7 +478,7 @@
         </div>
         <div class="skill-group">
           <h4>Messaging &amp; Events</h4>
-          <div class="items">Event-driven systems<span class="sep">·</span>Azure Service Bus<span class="sep">·</span>Google Pub/Sub</div>
+          <div class="items">Event-driven systems<span class="sep">·</span>CQRS<span class="sep">·</span>Transactional outbox (Wolverine)<span class="sep">·</span>Azure Service Bus<span class="sep">·</span>Google Pub/Sub</div>
         </div>
         <div class="skill-group">
           <h4>Frontend</h4>
